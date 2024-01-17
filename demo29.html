@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>demo29</title>
+          <script>
+// map object  - foreach method -(1st is value and 2 is key)
+
+const mapobj1 = new Map()
+mapobj1.set(1,101)
+mapobj1.set("id",1234)
+mapobj1.set("name","klu")
+
+document.writeln("Map Object 1 Size="+mapobj1.size+"</br>")
+
+document.writeln("<u>Map object 1 values</u></br>")
+
+mapobj1.forEach((v) => document.writeln(v))
+document.writeln("</br>")
+
+document.writeln("<u>Map Object 1 keys & values</u></br>")
+
+mapobj1.forEach((v,k) =>{8
+        document.writeln(k+":"+v)
+    })
+
+
+document.writeln("</br>")
+
+const mapobj2 = new Map([ ["id",101],["name","klu"]])//constructor
+
+document.writeln("Map Object 2 Size="+mapobj2.size+"</br>")
+
+document.writeln("<u>Map object 2 values</u></br>")
+
+mapobj2.forEach((v) => document.writeln(v))
+document.writeln("</br>")
+
+document.writeln("<u>Map Object 2 keys & values</u></br>")
+
+    const display = (v,k) => {
+            document.writeln(k+":"+v)
+        }
+mapobj2.forEach(display)//where display is arrow function & callback(function will be passed as argument)
+
+
+          </script>
+    </head>
+    <body>
+       
+    </body>
+</html>
